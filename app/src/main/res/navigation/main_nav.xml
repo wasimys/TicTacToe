@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.tictactoeapp.StartFragment"
+        android:label="fragment_start_game"
+        tools:layout="@layout/start_fragment" >
+        <action
+            android:id="@+id/action_startFragment_to_playersFragment"
+            app:destination="@+id/playersFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/playersFragment"
+        android:name="com.example.tictactoeapp.PlayerFragment"
+        android:label="fragment_players"
+        tools:layout="@layout/players_fragment" >
+    <action
+        android:id="@+id/action_playersFragment_to_gameFragment"
+        app:destination="@+id/gameFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.tictactoeapp.GameFragment"
+        android:label="fragment_players"
+        tools:layout="@layout/game_fragment" />
+
+</navigation>
